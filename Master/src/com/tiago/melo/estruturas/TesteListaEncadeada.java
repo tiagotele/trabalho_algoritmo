@@ -7,8 +7,8 @@ public class TesteListaEncadeada {
 	/**
 	 * Gera listas aleatórias
 	 */
-	public void geraListasAleatorias(long tamanhoMaximoDaLista) {
-		for (long indice = 10; indice < tamanhoMaximoDaLista; indice *= 10) {
+	public void geraListasAleatorias(int tamanhoMaximoDaLista) {
+		for (int indice = 10; indice < tamanhoMaximoDaLista; indice *= 10) {
 
 			long startTime = System.currentTimeMillis();
 			geraListaEncadeada(indice);
@@ -25,7 +25,7 @@ public class TesteListaEncadeada {
 	 * 
 	 * @param tamanhoDaLista tamanho da lista aleatória que deve ser criada
 	 */
-	public void geraListaEncadeada(long tamanhoDaLista) {
+	public void geraListaEncadeada(int tamanhoDaLista) {
 		LinkedList<String> listaEncadeadaStr = new LinkedList<String>();
 
 		for (long indice = 0; indice < tamanhoDaLista; indice++) {
