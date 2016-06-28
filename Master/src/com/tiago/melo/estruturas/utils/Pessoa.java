@@ -1,4 +1,4 @@
-package com.tiago.melo.estruturas.filaDePrioridades;
+package com.tiago.melo.estruturas.utils;
 
 public class Pessoa {
 	private int id;
@@ -15,5 +15,10 @@ public class Pessoa {
 
 	public String getNaome() {
 		return nome;
+	}
+
+	@Override
+	public String toString() {
+		return "id:" + nome + ": nome: " + nome;
 	}
 }

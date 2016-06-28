@@ -3,34 +3,38 @@ package com.tiago.melo.estruturas;
 import java.util.LinkedList;
 import java.util.UUID;
 
-public class TesteListaEncadeada {
-	/**
-	 * Gera listas aleatórias
-	 */
-	public void geraListasAleatorias(int tamanhoMaximoDaLista) {
-		for (int indice = 10; indice < tamanhoMaximoDaLista; indice *= 10) {
+import com.tiago.melo.estruturas.utils.Pessoa;
+import com.tiago.melo.interfaces.TestaEstrutura;
 
-			long startTime = System.currentTimeMillis();
-			geraListaEncadeada(indice);
-			long endTime = System.currentTimeMillis();
+public class TesteListaEncadeada implements TestaEstrutura {
 
-			System.out.println("Tamanho da lista = " + indice + " millisegundos.");
-			System.out.println("Tempo de execução total = " + (endTime - startTime) + " millisegundos.");
+	@Override
+	public void geraEstruturaDefault(int tamanho) {
+		long start = System.currentTimeMillis();
+
+		LinkedList<Integer> listaEncadeadaStr = new LinkedList<Integer>();
+
+		for (int indice = 0; indice < tamanho; indice++) {
+			listaEncadeadaStr.add(indice);
 		}
+
+		long finish = System.currentTimeMillis();
+		System.out.println("Tempo de execução do método geraListasAleatorias: " + (finish - start));
+
 	}
 
-	/**
-	 * 
-	 * Cria lista dinamicamente
-	 * 
-	 * @param tamanhoDaLista tamanho da lista aleatória que deve ser criada
-	 */
-	public void geraListaEncadeada(int tamanhoDaLista) {
-		LinkedList<String> listaEncadeadaStr = new LinkedList<String>();
+	@Override
+	public void geraEstruturaCustomizada(int tamanho) {
+		long start = System.currentTimeMillis();
 
-		for (long indice = 0; indice < tamanhoDaLista; indice++) {
-			listaEncadeadaStr.add(UUID.randomUUID().toString());
+		LinkedList<Pessoa> listaEncadeadaStr = new LinkedList<Pessoa>();
+
+		for (int indice = 0; indice < tamanho; indice++) {
+			listaEncadeadaStr.add(new Pessoa(indice, UUID.randomUUID().toString()));
 		}
+
+		long finish = System.currentTimeMillis();
+		System.out.println("Tempo de execução do método geraListasAleatorias: " + (finish - start));
 	}
 
 }
