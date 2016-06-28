@@ -16,4 +16,6 @@ public interface TestaEstrutura {
 	 * @param tamanho tamanho da estrutura gerada
 	 */
 	public void geraEstruturaCustomizada(int tamanho);
+	
+	public void adicionaTempoDeExecucao();
 }

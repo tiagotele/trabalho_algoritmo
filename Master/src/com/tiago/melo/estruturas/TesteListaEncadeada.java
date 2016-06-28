@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.UUID;
 
 import com.tiago.melo.estruturas.utils.Pessoa;
+import com.tiago.melo.estruturas.utils.Utils;
 import com.tiago.melo.interfaces.TestaEstrutura;
 
 public class TesteListaEncadeada implements TestaEstrutura {
@@ -20,6 +21,7 @@ public class TesteListaEncadeada implements TestaEstrutura {
 
 		long finish = System.currentTimeMillis();
 		System.out.println("Tempo de execução do método geraListasAleatorias: " + (finish - start));
+		Utils.criaLogDeExecucao("Tempo de execução do método geraListasAleatorias: " + (finish - start));
 
 	}
 
@@ -35,6 +37,13 @@ public class TesteListaEncadeada implements TestaEstrutura {
 
 		long finish = System.currentTimeMillis();
 		System.out.println("Tempo de execução do método geraListasAleatorias: " + (finish - start));
+		Utils.criaLogDeExecucao("Tempo de execução do método geraListasAleatorias: " + (finish - start));
+	}
+
+	@Override
+	public void adicionaTempoDeExecucao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

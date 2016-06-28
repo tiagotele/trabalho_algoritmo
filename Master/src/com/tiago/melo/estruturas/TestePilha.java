@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.util.UUID;
 
 import com.tiago.melo.estruturas.utils.Pessoa;
+import com.tiago.melo.estruturas.utils.Utils;
 import com.tiago.melo.interfaces.TestaEstrutura;
 
 public class TestePilha implements TestaEstrutura {
@@ -22,7 +23,7 @@ public class TestePilha implements TestaEstrutura {
 		}
 		long finish = System.currentTimeMillis();
 		System.out.println("Tempo de execução do método geraEstruturaDefault: " + (finish - start));
-
+		Utils.criaLogDeExecucao("Tempo de execução do método geraEstruturaDefault: " + (finish - start));
 	}
 
 	@Override
@@ -38,5 +39,12 @@ public class TestePilha implements TestaEstrutura {
 		}
 		long finish = System.currentTimeMillis();
 		System.out.println("Tempo de execução do método geraEstruturaCustomizada: " + (finish - start));
+		Utils.criaLogDeExecucao("Tempo de execução do método geraEstruturaCustomizada: " + (finish - start));
+	}
+
+	@Override
+	public void adicionaTempoDeExecucao() {
+		// TODO Auto-generated method stub
+
 	}
 }
